@@ -27,13 +27,12 @@
           <a href="https://www.linkedin.com/in/anugeeth2/">
             <font-awesome-icon :icon="['fab', 'linkedin']" />
           </a>
-		  <a href="https://www.linkedin.com/in/anugeeth2/">
+          <a href="https://www.linkedin.com/in/anugeeth2/">
             <font-awesome-icon :icon="['fab', 'telegram']" />
           </a>
-		  <a href="https://www.linkedin.com/in/anugeeth2/">
+          <a href="https://www.linkedin.com/in/anugeeth2/">
             <font-awesome-icon :icon="['fab', 'reddit']" />
           </a>
-
         </div>
       </div>
     </div>
@@ -110,7 +109,7 @@ h1 {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 3vmin 3vmin rgba(0, 0, 0, 0.22);
 }
 
-.icons a{
+.icons a {
   align-self: auto;
   text-decoration: none;
   font-size: 4vmin;
@@ -137,6 +136,12 @@ h1 {
   }
   100% {
     transform: scale(1) translate(10px, -30px);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .maindiv {
+    flex-direction: column;
   }
 }
 </style>
