@@ -16,6 +16,10 @@
       Hi, I'm
       <br />Anugeeth!
     </h1>
+	<div class="card">
+
+		Hello
+	</div>
   </div>
 </template>
 
@@ -60,6 +64,15 @@ h1 {
   z-index: -1;
   animation: move 10s ease-in-out infinite;
   transform-origin: 50% 50%;
+}
+
+.card{
+	background-color: white;
+	font-family: "Poppins", sans-serif;
+	padding: 5px;
+	font-size: 5vmax;
+	border-radius: 10px;
+
 }
 
 @keyframes move {
