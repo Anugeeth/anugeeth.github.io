@@ -1,9 +1,21 @@
 <template>
   <div>
-    <p class="line-1 anim-typewriter">Not yet ready !!!!</p>
-    <div
-      class="wrapper"
-    >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis libero voluptates quam dolores illo laudantium vel, veritatis illum officia exercitationem harum sequi tenetur iusto minus voluptate numquam corrupti voluptatibus fuga. Fugiat deserunt laborum, molestiae rerum incidunt atque. Animi aspernatur, inventore error autem atque assumenda exercitationem, nihil laborum quibusdam optio voluptates fugit deserunt debitis labore repudiandae ad necessitatibus fuga dicta, eos quae rem? Repellendus temporibus atque magni. Nostrum omnis consequuntur iusto qui error odio ducimus, ad reiciendis, deleniti sunt fugiat aliquam suscipit quam debitis tempora quae adipisci quas numquam possimus? At, impedit dolore ex officia ab cupiditate facilis? Aliquam cum, explicabo consequuntur recusandae veniam minima aliquid doloremque voluptas quidem possimus facere voluptatem officiis qui ullam unde illum nemo ea quibusdam molestiae accusantium repellat tenetur, non corporis! Debitis voluptate eius alias animi expedita atque porro odit tempora voluptatum accusamus! Sapiente, explicabo labore quaerat sit, eum quae, incidunt similique quas laboriosam soluta tenetur impedit obcaecati natus repudiandae ab ratione modi possimus odit alias quos! Praesentium debitis distinctio libero tenetur iusto perferendis impedit neque. Officiis recusandae ab magni, aliquam cumque labore dolorem harum deserunt numquam quod! Qui pariatur eaque, omnis exercitationem iusto quidem ex molestias ipsum, unde sequi maiores asperiores quasi ab quia laborum!</div>
+    <div class="blob">
+      <svg
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 310 350"
+      >
+        <path
+          d="M156.4,339.5c31.8-2.5,59.4-26.8,80.2-48.5c28.3-29.5,40.5-47,56.1-85.1c14-34.3,20.7-75.6,2.3-111  c-18.1-34.8-55.7-58-90.4-72.3c-11.7-4.8-24.1-8.8-36.8-11.5l-0.9-0.9l-0.6,0.6c-27.7-5.8-56.6-6-82.4,3c-38.8,13.6-64,48.8-66.8,90.3c-3,43.9,17.8,88.3,33.7,128.8c5.3,13.5,10.4,27.1,14.9,40.9C77.5,309.9,111,343,156.4,339.5z"
+        />
+      </svg>
+    </div>
+    <h1>
+      Hi, I'm
+      <br />Anugeeth!
+    </h1>
   </div>
 </template>
 
@@ -14,58 +26,60 @@ export default {
 </script>
 
 <style>
-
-
-.wrapper {
-
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-auto-rows: auto;
-
-
-
-
-   background-color: rgba(255, 255, 255, 0.75);
-  border-radius: 5px;
-  box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.75);
-  color: #000000;
-  padding:20px;
-  margin: 10px;
-}
-
-
-.line-1 {
-  position: relative;
-  top: 50%;
-  width: 24em;
-  margin: 0 auto;
-  border-right: 2px solid rgba(255, 255, 255, 0.75);
-  font-size: 180%;
-  text-align: center;
-  white-space: nowrap;
+@import url("https://fonts.googleapis.com/css?family=Poppins:700");
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
-  transform: translateY(-50%);
+  position: relative;
+  background: #ffb1a4;
+
+  display: flex;
+  align-items: center;
 }
 
-/* Animation */
-.anim-typewriter {
-  animation: typewriter 4s steps(44) 1s 1 normal both,
-    blinkTextCursor 500ms steps(44) infinite normal;
+h1 {
+  color: white;
+  font-size: 15vmin;
+  line-height: 1;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-family: "Poppins", sans-serif;
+  /* text-transform: uppercase; */
+  padding-left: 40px;
 }
-@keyframes typewriter {
-  from {
-    width: 0;
-  }
-  to {
-    width: 24em;
-  }
+
+.blob {
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: #023f92;
+  width: 50vmax;
+  z-index: -1;
+  animation: move 10s ease-in-out infinite;
+  transform-origin: 50% 50%;
 }
-@keyframes blinkTextCursor {
-  from {
-    border-right-color: rgba(255, 255, 255, 0.75);
+
+@keyframes move {
+  0% {
+    transform: scale(1) translate(10px, -30px);
   }
-  to {
-    border-right-color: transparent;
+  38% {
+    transform: scale(0.8, 1) translate(80vw, 30vh) rotate(160deg);
+  }
+  40% {
+    transform: scale(0.8, 1) translate(80vw, 30vh) rotate(160deg);
+  }
+  78% {
+    transform: scale(1.3) translate(0vw, 50vh) rotate(-20deg);
+  }
+  80% {
+    transform: scale(1.3) translate(0vw, 50vh) rotate(-20deg);
+  }
+  100% {
+    transform: scale(1) translate(10px, -30px);
   }
 }
 </style>
