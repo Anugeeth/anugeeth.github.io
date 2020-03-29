@@ -19,7 +19,7 @@
         <br />Anugeeth !
       </h1>
       <div class="card-social">
-        <p>I Code 👨‍💻</p>
+        <p class="text">I Code 👨‍💻</p>
         <div class="icons">
           <a href="https://github.com/Anugeeth/">
             <font-awesome-icon :icon="['fab', 'github']" />
@@ -27,12 +27,10 @@
           <a href="https://www.linkedin.com/in/anugeeth2/">
             <font-awesome-icon :icon="['fab', 'linkedin']" />
           </a>
-          <a href="https://www.linkedin.com/in/anugeeth2/">
+          <a href="https://t.me/anugeeth2/">
             <font-awesome-icon :icon="['fab', 'telegram']" />
           </a>
-          <a href="https://www.linkedin.com/in/anugeeth2/">
-            <font-awesome-icon :icon="['fab', 'reddit']" />
-          </a>
+         
         </div>
       </div>
     </div>
@@ -56,9 +54,8 @@ export default {
 body {
   margin: 0;
   padding: 0;
-  overflow: hidden;
-  position: relative;
   background: #ffb1a4;
+  overflow: hidden;
 }
 
 .maindiv {
@@ -68,6 +65,7 @@ body {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  overflow: hidden;
 }
 
 h1 {
@@ -95,12 +93,10 @@ h1 {
 .card-social {
   background-color: white;
   font-family: "Poppins", sans-serif;
-  padding: 5vmin;
-  font-size: 5vmax;
+  padding: 2vmax;
   border-radius: 20px;
-  font-size: 4vmin;
+  font-size: 4vmax;
   margin: 1rem;
-  position: relative;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
@@ -110,12 +106,10 @@ h1 {
 }
 
 .icons a {
-  align-self: auto;
   text-decoration: none;
-  font-size: 4vmin;
-  color: #ffb1a4;
-
-  /* padding-inline: 3rem; */
+  font-size: 4vmax;
+  color: #000;
+  padding: 2rem;
 }
 
 @keyframes move {
@@ -142,6 +136,16 @@ h1 {
 @media screen and (max-width: 1000px) {
   .maindiv {
     flex-direction: column;
+  }
+  .card-social {
+    padding: 10vmax;
+	font-size: 5vmax;
+  }
+  .blob {
+    width: 30vmax;
+  }
+  .icons a {
+    padding: 2vmin;
   }
 }
 </style>
