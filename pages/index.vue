@@ -12,35 +12,62 @@
         />
       </svg>
     </div>
-    <h1>
-      Hi, I'm
-      <br />Anugeeth!
-    </h1>
-	<!-- <div class="card">
 
-		Hello
-	</div> -->
+    <div class="maindiv">
+      <h1>
+        Hi, I'm
+        <br />Anugeeth !
+      </h1>
+      <div class="card-social">
+        <p>I Code 👨‍💻</p>
+        <div class="icons">
+          <a href="https://github.com/Anugeeth/">
+            <font-awesome-icon :icon="['fab', 'github']" />
+          </a>
+          <a href="https://www.linkedin.com/in/anugeeth2/">
+            <font-awesome-icon :icon="['fab', 'linkedin']" />
+          </a>
+		  <a href="https://www.linkedin.com/in/anugeeth2/">
+            <font-awesome-icon :icon="['fab', 'telegram']" />
+          </a>
+		  <a href="https://www.linkedin.com/in/anugeeth2/">
+            <font-awesome-icon :icon="['fab', 'reddit']" />
+          </a>
+
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  components: {}
+  components: {},
+
+  head() {
+    return {
+      title: "Home"
+    };
+  }
 };
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css?family=Poppins:700");
+/* @import url("https://fonts.googleapis.com/css?family=Poppins:700"); */
 body {
   margin: 0;
   padding: 0;
-  width: 100vw;
-  height: 100vh;
   overflow: hidden;
   position: relative;
   background: #ffb1a4;
+}
 
+.maindiv {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
   display: flex;
+  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -66,13 +93,30 @@ h1 {
   transform-origin: 50% 50%;
 }
 
-.card{
-	background-color: white;
-	font-family: "Poppins", sans-serif;
-	padding: 5px;
-	font-size: 5vmax;
-	border-radius: 10px;
+.card-social {
+  background-color: white;
+  font-family: "Poppins", sans-serif;
+  padding: 5vmin;
+  font-size: 5vmax;
+  border-radius: 20px;
+  font-size: 4vmin;
+  margin: 1rem;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
 
+.card-social:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 3vmin 3vmin rgba(0, 0, 0, 0.22);
+}
+
+.icons a{
+  align-self: auto;
+  text-decoration: none;
+  font-size: 4vmin;
+  color: #ffb1a4;
+
+  /* padding-inline: 3rem; */
 }
 
 @keyframes move {
