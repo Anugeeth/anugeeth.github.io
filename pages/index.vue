@@ -16,10 +16,10 @@
       Hi, I'm
       <br />Anugeeth!
     </h1>
-	<div class="card">
+	<!-- <div class="card">
 
 		Hello
-	</div>
+	</div> -->
   </div>
 </template>
 
