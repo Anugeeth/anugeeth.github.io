@@ -13,7 +13,8 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet' , href:'https://fonts.googleapis.com/css?family=Poppins:700'}
+      { rel: 'stylesheet' , href:'https://fonts.googleapis.com/css?family=Poppins:700'},
+      {rel:'stylesheet', href:'https://assets.calendly.com/assets/external/widget.css'}
     ]
 
 

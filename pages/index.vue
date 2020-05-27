@@ -30,7 +30,6 @@
           <a href="https://t.me/anugeeth2/">
             <font-awesome-icon :icon="['fab', 'telegram']" />
           </a>
-         
         </div>
       </div>
     </div>
@@ -43,14 +42,25 @@ export default {
 
   head() {
     return {
+      script: [
+      { src: 'https://assets.calendly.com/assets/external/widget.js' }
+    ],
       title: "Home"
     };
+  },
+  mounted() {
+    Calendly.initBadgeWidget({
+      url: "https://calendly.com/anugeeth2/30mins",
+      text: "Schedule a call?",
+      color: "#023f92",
+      textColor: "#ffffff",
+      branding: false
+    });
   }
 };
 </script>
 
 <style>
-/* @import url("https://fonts.googleapis.com/css?family=Poppins:700"); */
 body {
   margin: 0;
   padding: 0;
@@ -139,7 +149,7 @@ h1 {
   }
   .card-social {
     padding: 10vmax;
-	font-size: 5vmax;
+    font-size: 5vmax;
   }
   .blob {
     width: 30vmax;
